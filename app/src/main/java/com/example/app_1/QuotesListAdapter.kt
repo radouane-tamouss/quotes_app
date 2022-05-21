@@ -17,6 +17,7 @@ class QuotesListAdapter (val context: Context, val list: List<QuotesResponse>): 
     override fun onBindViewHolder(p0: QuotesViewHolder, p1: Int) {
         p0.textView_quote.text = list.get(p1).requester_name
         p0.textView_author.text = list.get(p1).request_id
+        p0.textView_info.text = list.get(p1).request_info
 
     }
 
@@ -30,5 +31,6 @@ class QuotesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 {
     var textView_quote: TextView = itemView.findViewById(R.id.textView_quote)
     var textView_author: TextView = itemView.findViewById(R.id.textView_author)
-    var buttonCopy: Button = itemView.findViewById(R.id.button_copy)
+    var textView_info: TextView = itemView.findViewById(R.id.textView_info)
+    var buttonCopy: Button = itemView.findViewById(R.id.ViewDetailsbtn)
 }

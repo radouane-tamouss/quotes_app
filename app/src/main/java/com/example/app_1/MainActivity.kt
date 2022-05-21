@@ -1,6 +1,7 @@
 package com.example.app_1
 
 import android.app.ProgressDialog
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
@@ -15,6 +16,7 @@ import android.view.MenuItem
 import android.widget.Toast
 import com.example.app_1.databinding.ActivityMainBinding
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.list_quotes.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -27,6 +29,12 @@ class MainActivity : AppCompatActivity() {
         dialog = ProgressDialog(this@MainActivity)
         dialog?.setTitle("Loading...")
         dialog?.show()
+
+
+        ViewDetailsbtn.setOnClickListener{
+            val intent  = Intent(this, DetailsActivity::class.java)
+            startActivity(intent)
+        }
 
     }
     private val listener: QuotesResponseListener = object : QuotesResponseListener{

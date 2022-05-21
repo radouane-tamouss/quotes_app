@@ -37,7 +37,7 @@ class RequestManager(mContext : Context) {
 
     }
     private interface CallQuotes{
-        @GET("api/getInterventions.php")
+        @GET("api/getInterventions.php?assign_tech=reda")
 
         fun CallQuotes(): Call<List<QuotesResponse>>
 
