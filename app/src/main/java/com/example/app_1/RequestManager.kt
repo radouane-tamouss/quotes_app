@@ -11,7 +11,7 @@ import retrofit2.http.GET
 class RequestManager(mContext : Context) {
 
     var retrofit = Retrofit.Builder()
-        .baseUrl("https://type.fit/")
+        .baseUrl("https://dataxpress.info/")
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
@@ -37,7 +37,8 @@ class RequestManager(mContext : Context) {
 
     }
     private interface CallQuotes{
-        @GET("api/quotes")
+        @GET("api/getInterventions.php")
+
         fun CallQuotes(): Call<List<QuotesResponse>>
 
     }

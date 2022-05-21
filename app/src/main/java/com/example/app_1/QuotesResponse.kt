@@ -1,7 +1,7 @@
 package com.example.app_1
 
 class QuotesResponse {
-    var text: String = ""
-    var author: String = ""
+    var requester_name: String = ""
+    var request_id: String = ""
 
 }
